@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 
-
 import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
 
@@ -63,7 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-background min-h-screen font-sans antialiased mx-auto`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-background mx-auto min-h-screen font-sans antialiased`}
       >
         <Navbar />
         <main className="flex-1">{children}</main>

@@ -7,7 +7,6 @@ import { Check, Copy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
-
 interface CodeBlockProps {
   code: string;
   language?: string;
@@ -32,9 +31,11 @@ export function CodeBlock({ code, language = 'typescript', title, className }: C
       )}
     >
       {(title || language) && (
-        <div className="border-border bg-muted/30 flex items-center justify-between border-b px-4 py-2">
+        <div className="border-border bg-muted/30 flex flex-wrap items-center justify-between gap-2 border-b px-3 py-2 sm:px-4">
           <div className="flex items-center gap-2">
-            {title && <span className="text-foreground text-sm font-medium">{title}</span>}
+            {title && (
+              <span className="text-foreground text-xs font-medium sm:text-sm">{title}</span>
+            )}
             {language && !title && (
               <span className="text-muted-foreground text-xs font-medium">{language}</span>
             )}
@@ -43,13 +44,17 @@ export function CodeBlock({ code, language = 'typescript', title, className }: C
             variant="ghost"
             size="sm"
             onClick={handleCopy}
-            className="h-8 w-8 p-0 opacity-0 transition-opacity group-hover:opacity-100"
+            className="h-7 w-7 p-0 opacity-0 transition-opacity group-hover:opacity-100 sm:h-8 sm:w-8"
           >
-            {copied ? <Check className="h-4 w-4 text-green-500" /> : <Copy className="h-4 w-4" />}
+            {copied ? (
+              <Check className="h-3.5 w-3.5 text-green-500 sm:h-4 sm:w-4" />
+            ) : (
+              <Copy className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+            )}
           </Button>
         </div>
       )}
-      <pre className="overflow-x-auto p-4 text-sm">
+      <pre className="overflow-x-auto p-3 text-xs sm:p-4 sm:text-sm">
         <code className="language-{language}">{code}</code>
       </pre>
       {!title && !language && (
@@ -57,9 +62,13 @@ export function CodeBlock({ code, language = 'typescript', title, className }: C
           variant="ghost"
           size="sm"
           onClick={handleCopy}
-          className="absolute top-2 right-2 h-8 w-8 p-0 opacity-0 transition-opacity group-hover:opacity-100"
+          className="absolute top-2 right-2 h-7 w-7 p-0 opacity-0 transition-opacity group-hover:opacity-100 sm:h-8 sm:w-8"
         >
-          {copied ? <Check className="h-4 w-4 text-green-500" /> : <Copy className="h-4 w-4" />}
+          {copied ? (
+            <Check className="h-3.5 w-3.5 text-green-500 sm:h-4 sm:w-4" />
+          ) : (
+            <Copy className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+          )}
         </Button>
       )}
     </div>

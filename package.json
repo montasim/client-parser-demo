@@ -9,6 +9,22 @@
     "url": "https://github.com/montasim/client-parser"
   },
   "homepage": "https://github.com/montasim/client-parser#readme",
+  "keywords": [
+    "user-agent",
+    "parser",
+    "client-parser",
+    "browser-detection",
+    "os-detection",
+    "device-detection",
+    "user-agent-parser",
+    "typescript",
+    "javascript",
+    "nextjs",
+    "react",
+    "demo",
+    "tailwindcss",
+    "shadcn-ui"
+  ],
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -4,14 +4,14 @@ export function Footer() {
   return (
     <footer className="border-border/40 bg-background border-t">
       <div className="flex w-full items-center justify-center">
-        <div className="container max-w-2xl px-4 py-8 md:px-8">
-          <div className="flex items-center justify-center gap-4 text-center">
-            <p className="text-muted-foreground text-sm">
+        <div className="container max-w-2xl px-4 py-6 sm:py-8 md:px-8">
+          <div className="flex flex-col items-center justify-center gap-3 text-center sm:flex-row sm:gap-4">
+            <p className="text-muted-foreground text-xs sm:text-sm">
               © {currentYear} Client Parser. All rights reserved.
             </p>
 
-            <div className="flex items-center gap-4">
-              <p className="text-muted-foreground text-sm">
+            <div className="flex items-center gap-3 sm:gap-4">
+              <p className="text-muted-foreground text-xs sm:text-sm">
                 Developed by{' '}
                 <a
                   href="https://github.com/montasim"
@@ -27,8 +27,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-              </a>
+              ></a>
             </div>
           </div>
         </div>
