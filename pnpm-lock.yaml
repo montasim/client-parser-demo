@@ -20,6 +20,9 @@ importers:
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
+      client-parser:
+        specifier: ^0.0.20
+        version: 0.0.20
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -1283,6 +1286,10 @@ packages:
 
   client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+
+  client-parser@0.0.20:
+    resolution: {integrity: sha512-mRFrpC1WLqkUYgC/8CZ3PKt6jp4NuEr3Qp3gKJlo7OoYSmKyU55RbCP7+At2wgkwEiNX250wpP6jC0dyEBHiEQ==}
+    engines: {node: '>=20.x'}
 
   cliui@8.0.1:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
@@ -4072,6 +4079,8 @@ snapshots:
       string-width: 7.2.0
 
   client-only@0.0.1: {}
+
+  client-parser@0.0.20: {}
 
   cliui@8.0.1:
     dependencies:
